@@ -4,7 +4,7 @@
 ## a discretized state space. The algorithm is trained using epsilon-greedy approach
 ## with Replay Memory ##
 ## @author: Rohan Sarkar (sarkarr@purdue.edu)
-import gym
+import gymnasium as gym
 import numpy as np
 import time
 import matplotlib.pyplot as plt 
@@ -14,7 +14,7 @@ seed = 0
 random.seed(seed) 
 np.random.seed(seed)
 ## Initialize parameters and environment variables: 
-env = gym.make('CartPole-v0')
+env = gym.make('CartPole-v1')
 GAMMA = 0.85
 MAX_ITER = 1000  #500
 EXPLORATION_MAX = 1.0
@@ -34,7 +34,8 @@ train_reward_history = []
 def map_discrete_state(cs):
     ds_vector = np.zeros(4); 
     ds = -1
-    # Discretize x (position) 
+    # Discretize x (position)
+    print(cs) 
     if abs(cs[0]) <= 0.8:
         ds_vector[0] = 1 
     elif cs[0] < -0.8:

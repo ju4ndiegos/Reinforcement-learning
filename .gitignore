@@ -1,1 +1,15 @@
-/isis4222-rl
+/isis4222-
+
+# Ignore image files in all directories
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tif
+*.tiff
+*.webp
+*.svg
+*.ico
+*.heic
+*.avif
