@@ -13,3 +13,5 @@
 *.ico
 *.heic
 *.avif
+*.mp4
+.DS_Store
